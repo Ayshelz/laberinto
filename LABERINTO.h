@@ -2,7 +2,7 @@
 
 // Instrucciones para el preprocesador
 #ifndef LABERINTO_
-#define LEBERINTO_
+#define LABERINTO_
 
 // Bibliotecas estándar de C++ que usaremos
 #include <vector>
