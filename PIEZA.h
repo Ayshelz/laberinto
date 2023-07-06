@@ -1,8 +1,11 @@
 // Cabecera con la definición de la estructura de la pieza y funciones asociadas a ella
 
 // Instrucciones para el preprocesador
-#ifndef PIEZA_
-#define PIEZA_
+#ifndef PIEZA_H
+#define PIEZA_H
+
+// Bibliotecas del proyecto
+#include "LABERINTO.h"
 
 // Definición de la estructura pieza
 class Pieza{
@@ -10,11 +13,11 @@ class Pieza{
   // Atributos accesibles desde fuera de la clase:
   public:
     Pieza();       
-    bool rotar();                   
-    bool mover_arriba();
-    bool mover_abajo();
-    bool mover_derecha();
-    bool mover_izquierda();
+    bool rotar( Laberynth& const);                   
+    bool mover_arriba( Laberynth& const);
+    bool mover_abajo( Laberynth& const);
+    bool mover_derecha( Laberynth& const);
+    bool mover_izquierda( Laberynth& const);
     void mostrar() const; 
     int centroi() const;
     int centroj() const;
