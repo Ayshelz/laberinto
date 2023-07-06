@@ -4,6 +4,9 @@
 #ifndef PIEZA_H
 #define PIEZA_H
 
+// Bibliotecas estándar de C++
+#include <iostream>
+
 // Bibliotecas del proyecto
 #include "LABERINTO.h"
 
