@@ -18,7 +18,7 @@ class Pieza{
   // Atributos accesibles desde fuera de la clase:
   public:
     Pieza();
-    bool rotar (const Laberynth& lab);
+    bool rotar (Laberynth& lab);
     bool mover_arriba (const Laberynth& lab);
     bool mover_abajo (const Laberynth& lab);
     bool mover_derecha (const Laberynth& lab);
