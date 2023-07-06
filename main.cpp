@@ -32,7 +32,8 @@ int main() {
         if (p.rotar(lab) || p.mover_derecha(lab) || p.mover_abajo(lab) || p.mover_izquierda(lab) || p.mover_arriba(lab)) {
                 std::cout << "Movimiento numero: " << mov <<std::endl;
             mov++;
-        } else {
+        } 
+        else {
            mov = -1; // Imposible de resolver
             break;
         }
