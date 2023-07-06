@@ -2,7 +2,7 @@
 
 // Implementación del constructor:
 Laberynth::Laberynth(const std::vector<std::string>& lab){
-  for (const std::string& fila_entrada : lab){     // Por cada vector en el vector de entrada
+  for (const std::string& fila_entrada : lab){     // Por cada cadena en el vector de entrada
     std::vector<char> fila_laberinto;              // Creamos una nueva fila para el laberinto
     for (char dato : fila_entrada){                
       fila_laberinto.pushback(dato);               // Introducimos cada caracter en dicha fila
@@ -13,7 +13,7 @@ Laberynth::Laberynth(const std::vector<std::string>& lab){
 
 // Implementación de la función mostrar:
 void Laberynth::mostrar() const {
-  for (const std::vector<char>& fila : mazeGrid) {  // Para cada vector de caracteres
+  for (const std::vector<char>& fila : mazeGrid) {  // Para cada fila del laberinto
         for (char dato : fila) {              
             std::cout << dato;                      // Mostramos cada uno de sus caracteres
         }
@@ -33,12 +33,12 @@ bool Laberynth:::objetivo (const Pieza& bloque) const{
     if ((i ==  total_filas-1) && (j+1 == total_columnas-1))               
       return true;                      
     else
-      return false;                          // y si no lo toca devolvemos false
+      return false;                          // y si no la toca devolvemos false
   }
   else{                                      // Si la pieza está vertical y toca la esquina del tablero devolvemos true
     if ((i+1 == total_filas-1) && (j == total_columnas-1))
       return true;
     else
-      return false;                          // y si no lo toca devolvemos false
+      return false;                          // y si no la toca devolvemos false
   }
 }
