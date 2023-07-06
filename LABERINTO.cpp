@@ -42,3 +42,16 @@ bool Laberynth:::objetivo (const Pieza& bloque) const{
       return false;                          // y si no la toca devolvemos false
   }
 }
+
+// Implementación de la función celda_valida:
+bool celda_valida(int x, int y) const{
+     int total_filas = matriz.size();          // Comprobamos las dimensiones del laberinto
+     int total_columnas = matriz[0].size();
+
+    if (x >= 0 && x < total_filas && y >= 0 && y < total_columnas) { 
+        if (matriz[x][y] != '#') {            // Si la casilla está dentro de los límites del laberinto comprobamos si es obstáculo
+            return true;                      // Devolvemos TRUE si no lo es
+        }
+    }
+    return false;                             // Si está fuera de los límites o es obstáculo se devuelve FALSE
+};
