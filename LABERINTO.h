@@ -18,13 +18,12 @@ class Laberynth{
   public:
     Laberynth(const std::vector<std::string>&);       // Constructor de la clase a partir de un vector de cadenas de caracteres
     void mostrar() const;                             // Muestra el laberinto
-    bool movimiento (const Pieza&) const;             // Devuelve true si el movimiento es posible y false en caso contrario
     bool objetivo (const Pieza&) const;               // Comprueba si el laberinto está resuelto
    
 
-// Atributos accesibles sólo desde la clase: (matriz de caracteres)
+// Atributos accesibles sólo desde la clase: 
   private:
-    std::vector<std::vector<char>> matriz;
+    std::vector<std::vector<char>> matriz;            // Estructura que almacenará el laberinto
 };
 
 #endif
