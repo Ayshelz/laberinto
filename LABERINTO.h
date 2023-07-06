@@ -4,13 +4,16 @@
 #ifndef LABERINTO_H
 #define LABERINTO_H
 
-// Bibliotecas estándar de C++ 
+// Bibliotecas estándar de C++
 #include <vector>
 #include <string>
 #include <iostream>
+using namespace std;
 
-// Bibliotecas del proyecto 
+// Bibliotecas del proyecto
 #include "PIEZA.h"
+
+class Pieza;
 
 // Definición de la estructura laberinto
 class Laberynth{
@@ -22,7 +25,7 @@ class Laberynth{
     bool objetivo (const Pieza&) const;               // Devuelve TRUE si el laberinto está resuelto y FALSE en caso contrario. Recibe la pieza.
     bool celda_valida(int, int) const;                // Devuelve TRUE si la casilla está vacía y FALSE si la casilla es un obstáculo o está fuera del laberinto
 
-// Atributos accesibles sólo desde la clase: 
+// Atributos accesibles sólo desde la clase:
   private:
     std::vector<std::vector<char>> matriz;            // Estructura que almacenará el laberinto
 };
