@@ -1,8 +1,8 @@
 // Cabecera con la definición de la estructura del laberinto y funciones asociadas a él
 
 // Instrucciones para el preprocesador
-#ifndef LABERINTO_
-#define LABERINTO_
+#ifndef LABERINTO_H
+#define LABERINTO_H
 
 // Bibliotecas estándar de C++ 
 #include <vector>
