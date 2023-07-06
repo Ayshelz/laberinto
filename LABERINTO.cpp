@@ -55,3 +55,7 @@ bool Laberynth::celda_valida(int x, int y) const{
     }
     return false;                             // Si está fuera de los límites o es obstáculo se devuelve FALSE
 };
+
+// Implementación de la función movimiento_valido:
+bool Laberynth::movimiento_valido(const Pieza& p, int mov) const{       // Devuelve TRUE si el movimiento puede realizarse y FALSE en caso contrario
+}
