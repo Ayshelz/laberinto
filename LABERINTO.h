@@ -18,7 +18,7 @@ class Laberynth{
   public:
     Laberynth(const std::vector<std::string>&);       // Constructor de la clase a partir de un vector de cadenas de caracteres
     void mostrar() const;                             // Muestra el laberinto
-    bool objetivo (const Pieza&) const;               // Comprueba si el laberinto está resuelto
+    bool objetivo (const Pieza&) const;               // Devuelve TRUE si el laberinto está resuelto y FALSE en caso contrario. Recibe la pieza.
    
 
 // Atributos accesibles sólo desde la clase: 
