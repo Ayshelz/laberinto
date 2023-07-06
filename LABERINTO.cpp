@@ -21,9 +21,6 @@ void Laberynth::mostrar() const {
     }
 }
 
-// Implementación de la función movimiento:
-bool Laberynth::movimiento(const Pieza& bloque) const{}
-
 // Implementación de la función objetivo:
 bool Laberynth:::objetivo (const Pieza& bloque) const{
   int total_filas = matriz.size();          // Comprobamos las dimensiones del laberinto
