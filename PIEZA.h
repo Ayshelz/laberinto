@@ -15,7 +15,10 @@ class Pieza{
     bool mover_abajo();
     bool mover_derecha();
     bool mover_izquierda();
-    void mostrar () const;               
+    void mostrar() const; 
+    int centroi() const;
+    int centroj() const;
+    int orientacion() const;
    
 
 // Atributos accesibles sólo desde la clase: 
