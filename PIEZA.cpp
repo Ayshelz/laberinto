@@ -5,7 +5,7 @@ Pieza::Pieza(){
     centro_fila = 0;
     centro_columna = 1;
     posicion = 0;
-}      
+}
 
 // Implementación de la función mostrar:
 void Pieza::mostrar() const{
@@ -25,18 +25,18 @@ bool Pieza::rotar (const Laberynth& lab){
 
     // Verificar la validez de las celdas en el área de 3x3
     for (int i = esquinax; i <= esquinax + 2; i++) {
-        for (int j = esquinay; j <= cesquinaj + 2; j++) {
+        for (int j = esquinay; j <= esquinay + 2; j++) {
             if (!lab.celda_valida(i, j))
                 return false; // Al menos una celda es inválida
         }
     }
     // Si todas las celdas son válidas realizamos el movimiento
     if (posicion == 0)
-        posicion = 1; 
-    else 
+        posicion = 1;
+    else
         posicion = 0;
-    return true; 
-}               
+    return true;
+}
 
 bool Pieza::mover_arriba (const Laberynth& lab){
     // Si la pieza está en posición horizontal, comprobamos las 3 celdas superiores a ella
@@ -45,7 +45,7 @@ bool Pieza::mover_arriba (const Laberynth& lab){
             !lab.celda_valida(centro_fila-1, centro_columna - 1) ||
             !lab.celda_valida(centro_fila-1, centro_columna + 1)) {
             return false;    // Al menos una de las tres celdas superiores es inválida
-        } 
+        }
         // Si todo es correcto realizamos el movimiento
         else{
             centro_fila--;
@@ -57,7 +57,7 @@ bool Pieza::mover_arriba (const Laberynth& lab){
     if (posicion == 1){
         if (!lab.celda_valida(centro_fila-2, centro_columna)) {
             return false;    // La celda superior es inválida
-        } 
+        }
         // Si todo es correcto, realizamos el movimiento
         else{
             centro_fila--;
@@ -73,7 +73,7 @@ bool Pieza::mover_abajo (const Laberynth& lab){
             !lab.celda_valida(centro_fila+1, centro_columna - 1) ||
             !lab.celda_valida(centro_fila+1, centro_columna + 1)) {
             return false;    // Al menos una de las tres celdas infereiores es inválida
-        } 
+        }
         // Si todo es correcto realizamos el movimiento
         else{
             centro_fila++;
@@ -85,7 +85,7 @@ bool Pieza::mover_abajo (const Laberynth& lab){
     if (posicion == 1){
         if (!lab.celda_valida(centro_fila-2, centro_columna)) {
             return false;    // La celda superior es inválida
-        } 
+        }
         // Si todo es correcto, realizamos el movimiento
         else{
             centro_fila++;
@@ -101,7 +101,7 @@ bool Pieza::mover_derecha (const Laberynth& lab){
             !lab.celda_valida(centro_fila-1, centro_columna+1) ||
             !lab.celda_valida(centro_fila+1, centro_columna+1)) {
             return false;    // Al menos una de las tres celdas derechas es inválida
-        } 
+        }
         // Si todo es correcto realizamos el movimiento
         else{
             centro_columna++;
@@ -113,7 +113,7 @@ bool Pieza::mover_derecha (const Laberynth& lab){
     if (posicion == 0){
         if (!lab.celda_valida(centro_fila, centro_columna+2)) {
             return false;    // La celda derecha es inválida
-        } 
+        }
         // Si todo es correcto, realizamos el movimiento
         else{
             centro_columna++;
@@ -129,7 +129,7 @@ bool Pieza::mover_izquierda (const Laberynth& lab){
             !lab.celda_valida(centro_fila-1, centro_columna-1) ||
             !lab.celda_valida(centro_fila+1, centro_columna-1)) {
             return false;    // Al menos una de las tres celdas izquierdas es inválida
-        } 
+        }
         // Si todo es correcto realizamos el movimiento
         else{
             centro_columna--;
@@ -141,7 +141,7 @@ bool Pieza::mover_izquierda (const Laberynth& lab){
     if (posicion == 0){
         if (!lab.celda_valida(centro_fila, centro_columna-2)) {
             return false;    // La celda izquierda es inválida
-        } 
+        }
         // Si todo es correcto, realizamos el movimiento
         else{
             centro_columna--;
