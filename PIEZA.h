@@ -13,11 +13,11 @@ class Pieza{
   // Atributos accesibles desde fuera de la clase:
   public:
     Pieza();       
-    bool rotar( Laberynth& const);                   
-    bool mover_arriba( Laberynth& const);
-    bool mover_abajo( Laberynth& const);
-    bool mover_derecha( Laberynth& const);
-    bool mover_izquierda( Laberynth& const);
+    bool rotar (const Laberynth& );                   
+    bool mover_arriba (const Laberynth& );
+    bool mover_abajo (const Laberynth& );
+    bool mover_derecha (const Laberynth& );
+    bool mover_izquierda (const Laberynth& );
     void mostrar() const; 
     int centroi() const;
     int centroj() const;
