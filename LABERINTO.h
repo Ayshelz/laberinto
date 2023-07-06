@@ -4,9 +4,11 @@
 #ifndef LABERINTO_
 #define LABERINTO_
 
-// Bibliotecas estándar de C++ que usaremos
+// Bibliotecas estándar de C++ 
 #include <vector>
 #include <string>
+
+// Bibliotecas del proyecto 
 #include "PIEZA.h"
 
 // Definición de la estructura laberinto
