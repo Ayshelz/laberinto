@@ -7,6 +7,7 @@
 // Bibliotecas estándar de C++ 
 #include <vector>
 #include <string>
+#include <iostream>
 
 // Bibliotecas del proyecto 
 #include "PIEZA.h"
