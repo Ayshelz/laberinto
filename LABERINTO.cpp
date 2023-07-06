@@ -55,4 +55,3 @@ bool Laberynth::celda_valida(int x, int y) const{
     }
     return false;                             // Si está fuera de los límites o es obstáculo se devuelve FALSE
 };
-
