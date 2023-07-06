@@ -24,6 +24,7 @@ class Laberynth{
     void mostrar() const;                             // Muestra el laberinto
     bool objetivo (const Pieza&) const;               // Devuelve TRUE si el laberinto está resuelto y FALSE en caso contrario. Recibe la pieza.
     bool celda_valida(int, int) const;                // Devuelve TRUE si la casilla está vacía y FALSE si la casilla es un obstáculo o está fuera del laberinto
+    bool movimiento_valido(const Pieza&) const;       // Devuelve TRUE si el movimiento puede realizarse y FALSE en caso contrario
 
 // Atributos accesibles sólo desde la clase:
   private:
