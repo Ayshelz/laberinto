@@ -29,7 +29,7 @@ int main() {
 
     while (!lab.objetivo(p)) {
         // Realizar un movimiento válido
-        if (p.mover_derecha(lab) || p.mover_abajo(lab) || p.rotar(lab) || p.mover_izquierda(lab) || p.mover_arriba(lab)) {
+        if (p.rotar(lab) || p.mover_derecha(lab) || p.mover_abajo(lab) || p.mover_izquierda(lab) || p.mover_arriba(lab)) {
                 std::cout << "Movimiento numero: " << mov <<std::endl;
             mov++;
         } else {
