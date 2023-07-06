@@ -88,7 +88,7 @@ bool Pieza::mover_abajo (const Laberynth& lab){
 
     // Si la pieza está en posición vertical, comprobamos la celda inferior a ella
     if (posicion == 1){
-        if (!lab.celda_valida(centro_fila-2, centro_columna)) {
+        if (!lab.celda_valida(centro_fila+2, centro_columna)) {
             return false;    // La celda superior es inválida
         }
         // Si todo es correcto, realizamos el movimiento
