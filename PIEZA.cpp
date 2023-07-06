@@ -18,7 +18,7 @@ void Pieza::mostrar() const{
 }
 
 // Implementación de las funciones de movimiento, comprobando que el movimiento sea posible:
-bool Pieza::rotar (const Laberynth& lab){
+bool Pieza::rotar ( Laberynth& lab){
     // Definimos la esquina superior izquierda del área de 3x3 a comprobar
     int esquinax = centro_fila - 1;
     int esquinay = centro_columna - 1;
@@ -31,11 +31,16 @@ bool Pieza::rotar (const Laberynth& lab){
         }
     }
     // Si todas las celdas son válidas realizamos el movimiento
-    if (posicion == 0)
-        posicion = 1;
+    if (!lab.casilla_rotada(centro_fila, centro_columna)){
+        lab.guardar_rotacion(centro_fila, centro_columna);
+        if (posicion == 0)
+            posicion = 1;
+        else
+            posicion = 0;
+        return true;
+    }
     else
-        posicion = 0;
-    return true;
+        return false;
 }
 
 bool Pieza::mover_arriba (const Laberynth& lab){
