@@ -3,9 +3,9 @@
 // Implementación del constructor:
 Laberynth::Laberynth(const std::vector<std::string>& lab){
   for (const std::string& fila_entrada : lab){     // Por cada cadena en el vector de entrada
-    std::vector<char> fila_laberinto;              // Creamos una nueva fila para el laberinto
-    for (char dato : fila_entrada){
-      fila_laberinto.push_back(dato);               // Introducimos cada caracter en dicha fila
+    std::vector<char> fila_laberinto;              // creamos una nueva fila para el laberinto
+    for (char dato : fila_entrada){                // Por cada caracter en la cadena
+      fila_laberinto.push_back(dato);              // lo introducimos en dicha fila
     }
     matriz.push_back(fila_laberinto);              // Introducimos la fila una vez completada en la estructura del laberinto
   }
@@ -13,11 +13,11 @@ Laberynth::Laberynth(const std::vector<std::string>& lab){
 
 // Implementación de la función mostrar:
 void Laberynth::mostrar() const {
-  for (const std::vector<char>& fila : matriz) {  // Para cada fila del laberinto
+  for (const std::vector<char>& fila : matriz) {   // Para cada fila del laberinto
         for (char dato : fila) {
-            std::cout << dato;                      // Mostramos cada uno de sus caracteres
+            std::cout << dato;                     // Mostramos cada uno de sus caracteres
         }
-        std::cout << '\n';                          // Separando las filas con un salto de línea
+        std::cout << '\n';                         // Separando las filas con un salto de línea
     }
 }
 
@@ -41,28 +41,4 @@ bool Laberynth::objetivo (const Pieza& bloque) const{
     else
       return false;                          // y si no la toca devolvemos false
   }
-}
-
-// Implementación de la función celda_valida:
-bool Laberynth::celda_valida(int x, int y) const{
-     int total_filas = matriz.size();          // Comprobamos las dimensiones del laberinto
-     int total_columnas = matriz[0].size();
-
-    if (x >= 0 && x < total_filas && y >= 0 && y < total_columnas) {
-        if (matriz[x][y] != '#') {            // Si la casilla está dentro de los límites del laberinto comprobamos si es obstáculo
-            return true;                      // Devolvemos TRUE si no lo es
-        }
-    }
-    return false;                             // Si está fuera de los límites o es obstáculo se devuelve FALSE
-};
-
-bool Laberynth::casilla_rotada(int x, int y) const{
-  if((matriz[x,y]=='x')
-    return true;
-  else
-    return false;
-}
-
-void Laberynt::guardar_rotacion(int x, int y){
-  matriz[x,y] = 'x';
 }
