@@ -20,13 +20,20 @@ Movimientos permitidos:
 Objetivo: resolver el laberinto en la menor cantidad de movimientos posible y mostrar dicha cantidad.
           En caso de que el laberinto sea imposible de resolver se deberá mostrar el valor -1.
 
-Ejemplos: se conocen 4 ejemplos de laberinto y su resultado para testear el código
+Ejemplos: se conocen 4 ejemplos de laberinto y su resultado para testear el código.
 
-------------------------------------------------------------
-Planificación del proyecto (48 horas naturales como máximo)
-------------------------------------------------------------
+Duración del proyecto: 48 horas naturales como máximo.
 
-- Recogida de los valores de entrada
-- Creación de la estructura del laberinto
-- Creación del algoritmo solución
-- Pruebas
+--------------------------------
+Conclusiones
+--------------------------------
+
+- El código resuelve el laberinto y es capaz de manejar aquellos que no tienen solución sin entrar en bucles infinitos.
+
+- En laberintos con varias soluciones posibles, no siempre devuelve el camino más corto.
+  *** SOLUCIÓN ***
+  Al haber usado el método de búsqueda en profundidad, se usan menos recursos pero no se garantiza el camino más corto.
+  Implementar el método de búsqueda en anchura para ello.
+
+- *** MEJORA ***
+  Comprobar posibles errores en la entrada de datos e incluir el manejo de excepciones
